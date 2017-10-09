@@ -4,12 +4,14 @@ function Person (name, age, address) {
     this.address = address;
 }
 
-function Student () {
-
+function Student (college) {
+    this.college = college;
 }
 
-Student.prototype = Person; //inherit person to student
+var person = new Person("raj","29", "TR nagar");
 
-Student.age = "19" // change the property value in inherited class
+Student.prototype = person; //inherit person to student
 
-console.log("Student Name : " + Student.age);
+var raj = new Student("KVGCE");
+
+console.log("Student Name : " + raj.address);
